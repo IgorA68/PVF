@@ -9,3 +9,5 @@ notes.md
 /vox_models/*_smoke.vox
 /vox_models/*_smoke.png
 /.pixel_gui_state.json
+/smoke_png
+/smoke_vox

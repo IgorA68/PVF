@@ -1,6 +1,8 @@
-# Your First Blueprint
+# Your First Manual Blueprint
 
-This short tutorial shows the smallest useful workflow for creating a voxel blueprint. For the parallel 2D path, see [docs/pixel_blueprints.md](docs/pixel_blueprints.md).
+This short tutorial shows the smallest useful workflow for writing a voxel blueprint by hand. For the parallel 2D path, see [docs/pixel_blueprints.md](docs/pixel_blueprints.md).
+
+If you are a normal user who wants an AI coding agent to create the blueprint for you, start with [docs/ai_agent_quick_start.md](docs/ai_agent_quick_start.md) instead.
 
 ## Step 1. Copy The Template
 

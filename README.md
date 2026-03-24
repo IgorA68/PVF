@@ -17,6 +17,22 @@ The repository is intentionally small: each blueprint is a Python function that 
 - inspect how the object reads in 3D or 2D and refine it through iteration;
 - learn procedural voxel construction from a compact, readable codebase.
 
+## You Do Not Need To Write Blueprints By Hand
+
+Most users do not need to write procedural blueprint code themselves.
+
+The intended beginner-friendly workflow is:
+
+1. describe the asset you want in plain language;
+2. ask an AI coding agent to create the blueprint file for this repository;
+3. save that file into `vox_blueprints/` or `pixel_blueprints/`;
+4. build it through the GUI or CLI;
+5. inspect the result and iterate.
+
+Manual blueprint writing is optional. It is useful for contributors, advanced users, and people who want to study or edit the procedural logic directly.
+
+If you want the AI-assisted path, start with [docs/ai_agent_quick_start.md](docs/ai_agent_quick_start.md).
+
 ## Showcase
 
 The repository includes curated voxel renders in [vox_preview_assets/README.md](vox_preview_assets/README.md) and generated pixel-art examples in the [images/](images) folder. README thumbnails stay intentionally small even when the source screenshots are much larger.
@@ -141,6 +157,7 @@ It is best treated as a compact procedural generator, a co-creation toy, and a r
 ### Shared Docs And Support
 
 - `templates/`: starting points for new blueprint contributions.
+- `docs/ai_agent_quick_start.md`: beginner-friendly instructions for asking an AI coding agent to create a blueprint for this repository.
 - `docs/architecture_overview.md`: short explanation of the public facades, workflow entry points, and internal engine split.
 - `CONTRIBUTING.md`: contributor workflow and repository expectations.
 - `todo.md`: publication and development roadmap.
@@ -162,6 +179,17 @@ pip install -r requirements.txt
 ## Quick Start
 
 If you want the fastest voxel path, launch the GUI, pick a blueprint, build it, and open the result in MagicaVoxel.
+
+### Fastest Path For Most Users
+
+If you want a new asset and do not plan to write Python yourself, use an AI coding agent first.
+
+1. describe the object you want;
+2. give the agent [docs/ai_agent_quick_start.md](docs/ai_agent_quick_start.md);
+3. let the agent create a blueprint file in the correct folder;
+4. build the result through the GUI or CLI.
+
+This repository is intentionally designed to support that workflow.
 
 ### Option 1. GUI
 
@@ -340,6 +368,8 @@ Create a new blueprint for this repository that generates a small stylized voxel
 Follow the existing blueprint contract, keep the code readable, and make it buildable through `python -m vox_art.build_blueprint`.
 ```
 
+For a fuller agent-facing instruction sheet, see [docs/ai_agent_quick_start.md](docs/ai_agent_quick_start.md).
+
 In the GUI, width, depth, and height overrides are applied only for the current build. Blueprint source files are no longer rewritten when a user changes dimensions.
 
 Before a build starts, the GUI validates that the selected blueprint can be imported and that it defines `make_model(...)`. If the blueprint has a syntax or import problem, the user gets a dialog instead of a silent failure.
@@ -502,6 +532,8 @@ For a compact release checklist, see [docs/release_checklist.md](docs/release_ch
 If you want to understand where these generated files fit in a practical asset pipeline, see [docs/magica_vox_workflow.md](docs/magica_vox_workflow.md).
 
 If you want to create a new blueprint from scratch, start with [docs/first_blueprint.md](docs/first_blueprint.md).
+
+If you want an AI coding agent to create a blueprint for you, start with [docs/ai_agent_quick_start.md](docs/ai_agent_quick_start.md).
 
 If you want to create or inspect a pixel-art blueprint, see [docs/pixel_blueprints.md](docs/pixel_blueprints.md).
 
